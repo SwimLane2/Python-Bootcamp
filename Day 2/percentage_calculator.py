@@ -1,15 +1,18 @@
-# Below code calculates the percentage of a part relative to a whole.
-def calculate_percentage(part, whole):    
-    if whole == 0:
-        return 0
-    return (part / whole) * 100
-# Example usage
-#part = 50
-#whole = 200
-#percentage = calculate_percentage(part, whole)
-#print(f"{part} is {percentage}% of {whole}")    
-print("Welcome to the Percentage Calculator!")
-part = float(input("Enter the part value: \n"))
-whole = float(input("Enter the whole value: \n"))
-percentage = calculate_percentage(part, whole)
-print(f"{part} is {percentage}% of {whole}")
+# Below are functions to calculate percentages and apply discounts.
+def apply_discount(total_amount, discount_percentage):
+    """
+    Returns the final amount after deducting the discount percentage.
+    """
+    if discount_percentage < 0 or discount_percentage > 100:
+        raise ValueError("Discount percentage must be between 0 and 100.")
+
+    discount_value = total_amount * (discount_percentage / 100)
+    final_amount = total_amount - discount_value
+    return final_amount
+
+total = float(input("Enter the total amount: "))
+discount = float(input("Enter the discount percentage: "))
+final_price = apply_discount(total, discount)
+saved_amount = total - final_price
+print(f"The final price after discount is: £{final_price:.2f}")
+print(f"You saved: £{saved_amount:.2f}")
