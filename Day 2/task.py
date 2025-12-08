@@ -1,0 +1,21 @@
+# print("Hello World"[-2])
+# print("123" + "456")
+# print(123 + 456)
+
+len("1234567")
+
+print(type(123456))
+print(type("123456"))
+print(type(12.34))
+print(type(True))
+print(type(False))
+print(type(None))
+print(type([]))
+print(type({}))
+print(type(()))
+print(type(set()))
+print(type(range(10)))
+
+name = len(input("Enter your name:"))
+print(name)
+print("Number of letters in you name: " + str(name))
