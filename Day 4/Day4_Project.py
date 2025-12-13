@@ -29,7 +29,7 @@ scissors = '''
 
 user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
 rock_paper_scissors = [rock, paper, scissors]
-computer_choice = random.randint(0, 2)
+computer_choice = random.randint(0, len(rock_paper_scissors) - 1)
 
 print("Computer chose:")
 print(rock_paper_scissors[computer_choice])
